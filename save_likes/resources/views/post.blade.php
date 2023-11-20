@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    walletページです
+    私の投稿
 </body>
 </html>
