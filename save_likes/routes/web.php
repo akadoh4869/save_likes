@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
+Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('sample.index');
+
+
+=======
 Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('post.timeline');
+>>>>>>> main
