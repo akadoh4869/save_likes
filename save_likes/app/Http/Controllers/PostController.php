@@ -11,4 +11,17 @@ class PostController extends Controller
     {
         return view('post.timeline');
     }
+
+    // public function post(Request $request)
+    // {
+    //     $validator = $request->validate([
+    //         'post' =>['required','string','max:100'],
+    //     ]);
+
+    //     Post::create([
+    //         'user_id' => Auth::user()->id,
+    //         'tweet' =>$request->tweet,
+    //     ]);
+    // }
 }
+

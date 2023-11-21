@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('post.timeline');
+
+// Route::get('/post','App\Http\Controllers\')
