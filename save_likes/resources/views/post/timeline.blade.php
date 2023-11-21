@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Likes</title>
+    <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
+    
 </head>
 <body>
-    timeline
+    <header>
+        <div class="header-left">
+            <img src="" alt="">
+        </div>
+        <div class="header-center">
+            <div class="title">
+                <h2>Likes</h2>
+            </div>
+        </div>
+        <div class="header-right">
+
+        </div>
+
+    </header>
+    <main></main>
+    <footer></footer>
 </body>
 </html>
