@@ -23,7 +23,12 @@
     </header>
     <main>
         <div class="content">
-            
+            @foreach($posts as $post)
+            <div class="post-box">
+                <a href="{{ route('show',[$post->user->id]) }}"><img src="{{ asset('storage/images/'.$post->user->avator) }}" alt=""></a>
+                <div>{{ $post->post }}</div>
+            </div>
+
         </div>
     </main>
     <footer></footer>
