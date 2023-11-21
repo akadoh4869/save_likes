@@ -1,17 +1,42 @@
-
+body,h1,h2,p,img{
+    margin:0;
+    padding: 0;
+}
 
 header{
     display: flex;
+    height:2%;
+    background-color: darkslategrey;
+    align-items: center;
+    
 }
 
 .header-left{
     width:33%;
+    padding-left: 10px;
+    padding-top: 10px;
+    float:left;
+    
+}
+
+.profile-picture{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .header-center{
     width:34%;
+    text-align: center;
+    color:white;
 }
 
 .header-right{
     width:33%;
+}
+
+.content{
+    width:100%;
 }

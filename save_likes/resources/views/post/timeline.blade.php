@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Likes</title>
     <link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
-    
+
 </head>
 <body>
     <header>
         <div class="header-left">
-            <img src="" alt="">
+            <img src="{{ asset('image/cat2.jpg') }}" alt="" class="profile-picture">
         </div>
         <div class="header-center">
             <div class="title">
@@ -19,11 +19,13 @@
             </div>
         </div>
         <div class="header-right">
-
         </div>
-
     </header>
-    <main></main>
+    <main>
+        <div class="content">
+            
+        </div>
+    </main>
     <footer></footer>
 </body>
 </html>
