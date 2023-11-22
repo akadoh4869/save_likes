@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class PostController extends Controller
 {
     //
     public function timeline()
     {
-        return view('post.timeline');
+        $posts = Post::latest()->Paginate();
+        
+        // dd($tweets);
+        return view('post.timeline',['posts' => $posts]);
     }
 
     // public function post(Request $request)
