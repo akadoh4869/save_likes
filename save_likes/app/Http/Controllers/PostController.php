@@ -16,18 +16,19 @@ class PostController extends Controller
         return view('post.timeline',['posts' => $posts]);
     }
 
-    public function post(Request $request)
+    public function create()
     {
-        $validator = $request->validate([
-            'post' =>['required','string','max:100'],
-        ]);
+        // $validator = $request->validate([
+        //     'post' =>['required','string','max:100'],
+        // ]);
 
-        Post::create([
-            'user_id' => Auth::user()->id,
-            'post' =>$request->post,
-        ]);
+        // Post::create([
+        //     'user_id' => Auth::user()->id,
+        //     'post' =>$request->post,
+        // ]);
 
-        return back();
+        return view('post.create');
+        // return redirect('/timeline');
     }
 }
 

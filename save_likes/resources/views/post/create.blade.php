@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    新規投稿する
 </body>
 </html>
