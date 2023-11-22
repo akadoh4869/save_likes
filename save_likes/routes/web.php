@@ -19,4 +19,4 @@ Route::get('/', function () {
 
 Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('post.timeline');
 
-// Route::get('/post','App\Http\Controllers\')
+Route::get('/create','App\Http\Controllers\PostController@create')->name('post.create');

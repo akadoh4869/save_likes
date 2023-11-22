@@ -50,7 +50,7 @@
                 <a href="/profile"><i class="fa-solid fa-user fa-lg"></i></a>
             </div>
         </div>
-        <button class="new-post-button" onclick="openNewPostForm()">＋</button>
+        <a href="{{ route('post.create') }}" class="new-post-button">＋</a>
 
     </footer>
 </body>
