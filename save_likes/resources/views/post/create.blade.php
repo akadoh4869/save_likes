@@ -24,6 +24,14 @@
         </div>
     </header>
     <main>
+        <div class="main-content">
+            <div class="image-content">
+                <img src="{{ asset('image/cat2.jpg') }}" alt="" class="profile-picture">
+
+            </div>
+            <input type="text" class="text-input" placeholder="今何してる？">
+
+        </div>
         
     </main>
 </body>
