@@ -30,5 +30,13 @@ class PostController extends Controller
         return view('post.create');
         // return redirect('/timeline');
     }
+
+    public function store(Request $request)
+    {
+        $post = new Post;
+        
+    }
+
+
 }
 
