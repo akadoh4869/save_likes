@@ -16,7 +16,7 @@
         </div>
         <div class="header-center">
             <div class="title">
-                <h2>Likes</h2>
+                <h1>Likes</h1>
             </div>
         </div>
         <div class="header-right">
