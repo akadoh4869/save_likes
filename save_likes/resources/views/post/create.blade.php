@@ -27,7 +27,7 @@
         <div class="main-content">
             <textarea name="mytextarea" class="text-input" placeholder="今何してる？"></textarea>
             <div class="image-content">
-                <img src="{{ asset('image/cat2.jpg') }}" alt="" class="profile-picture">
+                <img src="{{ asset('/storage/image/cat2.jpg') }}" alt="" class="profile-picture">
 
             </div>
 
