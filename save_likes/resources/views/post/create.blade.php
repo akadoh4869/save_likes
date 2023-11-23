@@ -25,11 +25,11 @@
     </header>
     <main>
         <div class="main-content">
+            <textarea name="mytextarea" class="text-input" placeholder="今何してる？"></textarea>
             <div class="image-content">
                 <img src="{{ asset('image/cat2.jpg') }}" alt="" class="profile-picture">
 
             </div>
-            <input type="text" class="text-input" placeholder="今何してる？">
 
         </div>
         
