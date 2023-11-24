@@ -18,8 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('post.timeline');
+// Route::post('/timeline','App\Http\Controllers\PostController@create');
 
-Route::get('/create','App\Http\Controllers\PostController@create')->name('post.create');
+Route::post('/create','App\Http\Controllers\PostController@create')->name('post.create');
 
 Auth::routes();
 
