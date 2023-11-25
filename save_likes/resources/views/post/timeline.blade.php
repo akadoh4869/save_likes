@@ -12,7 +12,9 @@
 <body>
     <header>
         <div class="header-left">
-            <img src="{{ asset('/storage/image/'.$post->user->avatar) }}" alt="" class="profile-picture">
+            @auth
+                <img src="{{ asset('/storage/image/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
+            @endauth
         </div>
         <div class="header-center">
             <div class="title">

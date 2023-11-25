@@ -17,6 +17,11 @@ class PostController extends Controller
         return view('post.timeline',['posts' => $posts]);
     }
 
+    public function showCreateForm()
+    {
+        return view('post.create.form');
+    }
+
     public function create(Request $request)
     {
         $validator = $request->validate([
@@ -25,10 +30,10 @@ class PostController extends Controller
 
         Post::create([
             'user_id' => Auth::user()->id,
-            'post' => $request->post,
+            'post' => $request->content,
         ]);
 
-        return view('post.create');
+        return redirect()->route('post.timeline');
     }
 
     // public function store(Request $request)

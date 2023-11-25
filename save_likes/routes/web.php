@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +21,11 @@ Route::get('/', function () {
 });
 
 Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('post.timeline');
-// Route::post('/timeline','App\Http\Controllers\PostController@create');
 
-Route::post('/create','App\Http\Controllers\PostController@create')->name('post.create');
+Route::get('/create','App\Http\Controllers\PostController@showCreateForm')->name('post.create.form');
+
+Route::get('/create','App\Http\Controllers\PostController@create')->name('post.create');
+
 
 Auth::routes();
 
