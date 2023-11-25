@@ -29,7 +29,7 @@
                 @csrf
                 <textarea name="content" class="text-input" placeholder="今何してる？"></textarea>
                 <div class="image-content">
-                    <img src="{{ asset('/storage/image/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
+                    <img src="{{ asset('/storage/images/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
                 </div>
             </form>
         </div>

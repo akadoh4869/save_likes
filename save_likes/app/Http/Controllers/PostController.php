@@ -19,7 +19,7 @@ class PostController extends Controller
 
     public function showCreateForm()
     {
-        return view('post.create.form');
+        return view('post.create');
     }
 
     public function create(Request $request)
@@ -28,12 +28,23 @@ class PostController extends Controller
             'post' => ['required','string','max:140'],
         ]);
 
-        Post::create([
-            'user_id' => Auth::user()->id,
-            'post' => $request->content,
-        ]);
+        try{
+            Post::create([
+                'user_id' => Auth::user()->id,
+                'post' => $request->post,
+            ]);
+            
+            return redirect()->route('post.timeline');
 
-        return redirect()->route('post.timeline');
+        } catch(\Exception $e){
+            // バリデーションエラーが発生した場合の処理
+            \Log::error($e->getMessage());
+
+            //例外メッセージを取得してリダイレクトするか、エラーメッセージを表示するかなどの処理
+            return redirect()->back()->withErrors(['error'=>'データ保存中にエラーが発生しました。']);
+        }
+
+    
     }
 
     // public function store(Request $request)

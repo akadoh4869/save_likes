@@ -13,7 +13,7 @@
     <header>
         <div class="header-left">
             @auth
-                <img src="{{ asset('/storage/image/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
+                <img src="{{ asset('/storage/images/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
             @endauth
         </div>
         <div class="header-center">
