@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="header-left">
-            <img src="{{ asset('/storage/image/cat2.jpg') }}" alt="" class="profile-picture">
+            <img src="{{ asset('/storage/image/'.$post->user->avatar) }}" alt="" class="profile-picture">
         </div>
         <div class="header-center">
             <div class="title">
@@ -26,8 +26,8 @@
         <div class="content">
             @foreach($posts as $post)
             <div class="post-box">
-                <a href="{{ route('show',[$post->user->id]) }}"><img src="{{ asset('storage/images/'.$tweet->user->avatar) }}" alt=""></a>
-                <div>{{ $tweet->tweet }}</div>
+                <a href="{{ route('show',[$post->user->id]) }}"><img src="{{ asset('storage/images/'.$post->user->avatar) }}" alt=""></a>
+                <div>{{ $post->post }}</div>
             </div>
             @endforeach
 
