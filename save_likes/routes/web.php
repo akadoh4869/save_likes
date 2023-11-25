@@ -24,7 +24,7 @@ Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('po
 
 Route::get('/create','App\Http\Controllers\PostController@showCreateForm')->name('post.create.form');
 
-Route::get('/create','App\Http\Controllers\PostController@create')->name('post.create');
+Route::post('/create','App\Http\Controllers\PostController@create')->name('post.create');
 
 
 Auth::routes();
