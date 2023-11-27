@@ -19,7 +19,10 @@
 
         </div>
         <div class="header-right">
-            <a href="{{ route('post.timeline') }}" class="create-btn">新規投稿する</a>
+            {{-- <a href="{{ route('post.timeline') }}" class="create-btn">新規投稿する</a> --}}
+            {{-- <button type="submit" form="post-form" class="create-btn">
+                <a href="{{ route('post.timeline') }}" class="create-btn-link">新規投稿する</a>
+            </button> --}}
 
         </div>
     </header>
@@ -31,6 +34,8 @@
                 <div class="image-content">
                     <img src="{{ asset('/storage/images/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
                 </div>
+                <button type="submit" class="create-btn">新規投稿する</button>
+
             </form>
         </div>
         

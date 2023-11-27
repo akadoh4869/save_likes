@@ -28,24 +28,10 @@ header{
 
 .header-right{
     width:33%;
-    padding-right: 10px;
+    /* padding-right: 10px;
     text-align: right;
-    padding-top: 12px;
+    padding-top: 12px; */
 
-}
-.create-btn{
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px;
-    font-size: 15px;
-    font-weight: bold;
-    border: 2px solid darkslategray;
-    border-radius: 100vh; /* 50%で円形になります */
-    background-color: rgb(24, 151, 151); /* ボタンの背景色 */
-    color: #fff; /* ボタンのテキスト色 */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .main-content{
@@ -74,6 +60,21 @@ textarea{
     padding-top: 25px;
     padding-left: 65px;
     font-size: 17px;
+}
+
+.create-btn{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid darkslategray;
+    border-radius: 100vh; /* 50%で円形になります */
+    background-color: rgb(24, 151, 151); /* ボタンの背景色 */
+    color: #fff; /* ボタンのテキスト色 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 
