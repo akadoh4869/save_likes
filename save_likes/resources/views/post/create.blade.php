@@ -19,13 +19,13 @@
 
         </div>
         <div class="header-right">
-            <a href="{{ route('post.create.form') }}" class="create-btn">新規投稿する</a>
+            <a href="{{ route('post.timeline') }}" class="create-btn">新規投稿する</a>
 
         </div>
     </header>
     <main>
         <div class="main-content">
-            <form action="{{ route('post.timeline') }}" method="post">
+            <form action="{{ route('post.store') }}" method="post">
                 @csrf
                 <textarea name="content" class="text-input" placeholder="今何してる？"></textarea>
                 <div class="image-content">
