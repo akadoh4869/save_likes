@@ -53,9 +53,11 @@ header{
 
 textarea{
     resize: none;
+    border: none;
+    /* width: 100vw; */
 }
 .text-input {
-    width: 100%;
+    width: calc(100% - 75px);
     height:50vh;
     padding-top: 25px;
     padding-left: 65px;
@@ -75,6 +77,9 @@ textarea{
     color: #fff; /* ボタンのテキスト色 */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    top: 15px;
+    right: 6%;
 }
 
 
