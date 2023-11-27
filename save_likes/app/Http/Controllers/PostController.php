@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Post;
+use Illuminate\Support\Facades\Log;
+
 
 class PostController extends Controller
 {
@@ -17,46 +20,49 @@ class PostController extends Controller
         return view('post.timeline',['posts' => $posts]);
     }
 
-    public function showCreateForm()
+    public function create()
     {
         return view('post.create');
     }
 
-    public function create(Request $request)
+    public function store(Request $request)
     {
-        $validator = $request->validate([
-            'post' => ['required','string','max:140'],
+        $validatedData = $request->validate([
+            'content' => ['required','string','max:140'],
         ]);
 
+
+        // $post = new \App\Models\Post();
+        // $post ->user_id = Auth::user()->id;
+        // $post ->content = $validatedData['content'];
+        // $post->save();
+
+        // return redirect()->route('post.timeline');
+
         try{
+            DB::beginTransaction();
+
             Post::create([
                 'user_id' => Auth::user()->id,
-                'post' => $request->post,
+                'post' => $request->content,
             ]);
+
+            DB::commit();
             
             return redirect()->route('post.timeline');
 
         } catch(\Exception $e){
+            DB::rollback();
             // バリデーションエラーが発生した場合の処理
-            \Log::error($e->getMessage());
+            Log::error('データ保存中にエラーが出ました：'. $e->getMessage());
 
             //例外メッセージを取得してリダイレクトするか、エラーメッセージを表示するかなどの処理
             return redirect()->back()->withErrors(['error'=>'データ保存中にエラーが発生しました。']);
         }
 
+
     
     }
-
-    // public function store(Request $request)
-    // {
-    //     $post = new Post;
-
-    // }
-
-
-
-
-
 
 }
 

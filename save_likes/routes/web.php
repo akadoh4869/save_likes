@@ -22,9 +22,11 @@ Route::get('/', function () {
 
 Route::get('/timeline','App\Http\Controllers\PostController@timeline')->name('post.timeline');
 
-Route::get('/create','App\Http\Controllers\PostController@showCreateForm')->name('post.create.form');
+Route::get('/create','App\Http\Controllers\PostController@create')->name('post.create');
 
-Route::post('/create','App\Http\Controllers\PostController@create')->name('post.create');
+Route::post('/timeline','App\Http\Controllers\PostController@store')->name('post.store');
+
+Route::get('/user/show/{id}','App\Http\Controllers\UserController@show')->name('show');
 
 
 Auth::routes();
