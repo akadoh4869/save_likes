@@ -14,7 +14,7 @@ class PostController extends Controller
     //
     public function timeline()
     {
-        $posts = Post::with('user')->get();
+        $posts = Post::with('user')->orderBy('created_at','desc')->get();
         
         // dd($tweets);
         return view('post.timeline',['posts' => $posts]);

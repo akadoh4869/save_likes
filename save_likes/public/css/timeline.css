@@ -43,12 +43,26 @@ header{
     /* height:px; */
 }
 
+.post-box{
+    display: flex;
+}
+
 a > img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 2px solid #fff;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.post-content{
+    display: column;
+}
+
+.username{
+    margin-left: 10px;
+    padding-top: 1%;
+
 }
 
 footer{

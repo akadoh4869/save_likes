@@ -29,10 +29,12 @@
             @foreach($posts as $post)
             <div class="post-box">
                 <a href="{{ route('show',[$post->user->id]) }}"><img src="{{ asset('storage/images/'.$post->user->avatar) }}" alt=""></a>
-                <div>{{ $post->post }}</div>
+                <div class="post-content">
+                    <div class="username">{{ $post->user->name }}</div>
+                    <div class="content-text">{{ $post->post }}</div>
+                </div>
             </div>
             @endforeach
-
         </div>
     </main>
     <footer>
@@ -49,7 +51,7 @@
         </div>
         <div class="footer-right">
             <div class="myprofile-btn">
-                <a href="/profile"><i class="fa-solid fa-user fa-lg"></i></a>
+                <a href="{{ route('show',[$post->user->id]) }}"><i class="fa-solid fa-user fa-lg"></i></a>
             </div>
         </div>
         <a href="{{ route('post.create') }}" class="new-post-button">＋</a>
