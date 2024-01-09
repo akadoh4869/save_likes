@@ -3,49 +3,74 @@ body,h1,h2,p,img{
     padding: 0;
 }
 
-header{
+.whole-page{
     display: flex;
-    height:2%;
-    background-color: darkslategrey;
-    align-items: center;
+    width: 100%;
+}
+
+.navigation{
+    width: 15%;
+    height: 100vh;
+    box-sizing: border-box; /* ボーダーボックスモデルを使用 */
+    border-right: 1px solid #ccc; /* 縦のラインを引く */
+    position: fixed;
+
+}
+.title > h3{
+    margin-top: 15%;
+    padding-left: 10%;
+}
+
+li{
+    list-style: none;
+    margin-top: 15%;
+    padding-left: 10%;
+}
+
+li > a{
+    text-decoration: none;
+}
+
+.list-a{
+    text-decoration: none;
+    color: black;
+    transition: font-size 0.3s ease-in-out;
+    transform-origin: center;
+    font-size: 18px;
+    /* padding-right: 10px; */
     
 }
 
-.header-left{
-    width:33%;
-    padding-left: 10px;
-    padding-top: 10px;
-    float:left;
-    
+.list-a > i{
+    padding-right: 10px;
 }
 
-.profile-picture{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
+/* .list-a:hover{
+   transform: scale(1.2);
+   color: black;
+   text-decoration: none;
+} */
 
-.header-center{
-    width:34%;
-    text-align: center;
-    color:white;
-}
-
-.header-right{
-    width:33%;
-}
 
 .content{
-    width:100%;
+    width:55%;
     height:100vh;
-    /* height:px; */
+    margin-left: 15%;
+    margin-top: 5%;
+    padding-left:5%;
+    padding-right: 5%;
+    justify-content: center;
+    
 }
 
 .post-box{
     display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 15px;
 }
+
+
 
 a > img{
     width: 40px;
@@ -65,7 +90,36 @@ a > img{
 
 }
 
-footer{
+.user-display{
+    width: 30%;
+    height: 100vw;
+    margin-top: 5%;
+    /* display: flex; */
+    /* align-items: center; */
+
+}
+.my-profile{
+    display: flex;
+    /* align-items: center; */
+}
+
+.my-profile > img{
+    /* display: flex; */
+    width: 40px; /* 例: アバターの幅を指定 */
+    height: 40px; /* 例: アバターの高さを指定 */
+    border-radius: 50%; /* 丸い形状にする（必要に応じて） */
+    margin-right: 10px; /* 適切な間隔を追加 */
+}
+
+a{
+    display: flex;
+}
+
+.username {
+    font-weight: bold; /* 例: ユーザー名の太字スタイル */
+}
+
+/* footer{
     display:flex;
     height:50px;
     background-color: darkslategrey;
@@ -91,16 +145,16 @@ footer{
 .footer-right{
     width: 33%;
 
-}
+} */
 
 .fa-lg{
     color:white;
 }
 
-.new-post-button {
+/* .new-post-button {
     position: absolute;
-    right: 30px; /* フッター右側からの距離を調整 */
-    top: -75px; /* フッター上部からの距離を調整 */
+    right: 30px; 
+    top: -75px; 
     background-color: darkslategray;
     color: white;
     border: none;
@@ -109,4 +163,4 @@ footer{
     cursor: pointer;
     font-size: 20px;
     text-decoration: none;
-}
+} */

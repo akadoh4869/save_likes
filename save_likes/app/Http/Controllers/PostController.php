@@ -31,14 +31,6 @@ class PostController extends Controller
             'content' => ['required','string','max:140'],
         ]);
 
-
-        // $post = new \App\Models\Post();
-        // $post ->user_id = Auth::user()->id;
-        // $post ->content = $validatedData['content'];
-        // $post->save();
-
-        // return redirect()->route('post.timeline');
-
         try{
             DB::beginTransaction();
 

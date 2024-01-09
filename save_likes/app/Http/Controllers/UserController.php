@@ -12,7 +12,11 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('profile',['user'=>$user]);
+        return view('user.profile',['user'=>$user]);
     }
     
+    public function search()
+    {
+        return view('search');
+    }
 }
