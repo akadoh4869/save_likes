@@ -32,7 +32,8 @@
                     <li><a href="{{ route('message.select') }}" class="list-a"><i class="fa-solid fa-envelope"></i>メッセージ</a></li>
                     <li><a href="{{ route('post.create') }}" class="list-a"><i class="fa-solid fa-square-plus"></i>新規投稿</a></li>
                     <li><a href="{{ route('show',['id' => Auth::id()]) }}" class="list-a"><i class="fa-solid fa-user"></i>プロフィール</a></li>
-                    <li><a href="{{ route('post.likes') }}" class="list-a"><i class="fa-regular fa-heart"></i>いいね（変換）</a></li>
+                    <li><a href="{{ route('post.likes') }}" class="list-a"><i class="fa-solid fa-heart"></i></i>いいね数（変換）</a></li>
+                    {{-- <li><a href="{{ route('post.list') }}" class="list-a"><i class="fa-solid fa-bookmark"></i>投稿保存</a></li> --}}
                 </nav>
             </div>
             <div class="content">
@@ -40,7 +41,7 @@
                 <div class="post-box">
                     <a href="{{ route('show',[$post->user->id]) }}">
                         <img src="{{ asset('storage/images/'.$post->user->avatar) }}" alt="">
-                        <a href="">
+                        <a href="{{ route('post.detail',['id' => $post->id]) }}">
                             <div class="post-content">
                                 <div class="username">{{ $post->user->name }}</div>
                                 <div class="content-text">{{ $post->post }}</div>
