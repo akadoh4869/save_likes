@@ -9,11 +9,12 @@ body,h1,h2,p,img{
 }
 
 .navigation{
-    width: 15%;
+    width: 25%;
     height: 100vh;
     box-sizing: border-box; /* ボーダーボックスモデルを使用 */
     border-right: 1px solid #ccc; /* 縦のラインを引く */
     position: fixed;
+    padding-left: 7%;
 
 }
 .title > h3{
@@ -53,12 +54,12 @@ li > a{
 
 
 .content{
-    width:55%;
+    width:45%;
     height:100vh;
-    margin-left: 15%;
+    margin-left: 25%;
     margin-top: 5%;
-    padding-left:5%;
-    padding-right: 5%;
+    padding-left:10%;
+    padding-right: 10%;
     justify-content: center;
     
 }
@@ -113,6 +114,7 @@ a > img{
 
 a{
     display: flex;
+    text-decoration: none;
 }
 
 .username {

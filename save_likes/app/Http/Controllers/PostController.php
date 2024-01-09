@@ -51,10 +51,20 @@ class PostController extends Controller
             //例外メッセージを取得してリダイレクトするか、エラーメッセージを表示するかなどの処理
             return redirect()->back()->withErrors(['error'=>'データ保存中にエラーが発生しました。']);
         }
-
-
-    
     }
+
+    public function detail($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('post.detail', ['post' => $post]);
+    }
+
+    // public function addlist()
+    // {
+    //     return view('post.list',[]);
+
+    // }
+
 
 }
 

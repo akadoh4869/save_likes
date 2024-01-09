@@ -37,8 +37,8 @@ route::get('/message/select','App\Http\Controllers\MessageController@select')->n
 //いいねページ
 route::get('/post/likes','App\Http\Controllers\LikeController@index')->name('post.likes');
 
-
-
+route::get('/post/detail/{id}','App\Http\Controllers\PostController@detail')->name('post.detail');
+// route::get('/post/list/{id}','App\Http\Controllers\PostController@addlist')->name('post.list');
 
 
 Auth::routes();
