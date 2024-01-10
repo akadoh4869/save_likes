@@ -10,16 +10,6 @@
 
 </head>
 <body>
-    {{-- <header>
-        <div class="header-left">
-            @auth
-                <img src="{{ asset('/storage/images/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
-            @endauth
-        </div>
-       
-        <div class="header-right">
-        </div>
-    </header> --}}
     <main>
         <div class="whole-page">
             <div class="navigation">
@@ -37,6 +27,16 @@
                 </nav>
             </div>
             <div class="content">
+                <div class="create-box">
+                    <form action="{{ route('post.store') }}" method="post">
+                        @csrf
+                        <textarea name="content" class="text-input" placeholder="今何してる？"></textarea>
+                        <div class="image-content">
+                            <img src="{{ asset('/storage/images/'. Auth::user()->avatar) }}" alt="" class="profile-picture">
+                        </div>
+                        <button type="submit" class="create-btn">投稿</button>
+                    </form>
+                </div>
                 @foreach($posts as $post)
                 <div class="post-box">
                     <a href="{{ route('show',[$post->user->id]) }}">
@@ -53,8 +53,8 @@
             </div>
             <div class="user-display">
                 <div class="my-prifile">
-                    <a href="{{ route('show',[$post->user->id]) }}"><img src="{{ asset('storage/images/'.$post->user->avatar) }}" alt="">
-                        <div class="username">{{ $post->user->name }}</div>
+                    <a href="{{ route('show',[$post->user->id]) }}"><img src="{{ asset('/storage/images/'. Auth::user()->avatar) }}" alt="">
+                        <div class="username">{{ Auth::user()->name }}</div>
                     </a>   
                 </div>
                 <div class="favolite-user">
